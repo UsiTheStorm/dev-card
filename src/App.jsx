@@ -16,20 +16,6 @@ const person = {
   ],
 };
 
-function App() {
-  const { link, name, description, skills } = person;
-  return (
-    <div className="card">
-      <Avatar image={link} alt={name} />
-      <div className="data">
-        <Intro name={name} description={description} />
-
-        <SkillList skills={skills} />
-      </div>
-    </div>
-  );
-}
-
 function Avatar({ image, alt }) {
   return <img className="avatar" src={image} alt={alt} />;
 }
@@ -57,6 +43,20 @@ function SkillList({ skills }) {
       {skills.map((skill) => (
         <Skill skill={skill} key={skill.name} />
       ))}
+    </div>
+  );
+}
+
+function App() {
+  const { link, name, description, skills } = person;
+  return (
+    <div className="card">
+      <Avatar image={link} alt={name} />
+      <div className="data">
+        <Intro name={name} description={description} />
+
+        <SkillList skills={skills} />
+      </div>
     </div>
   );
 }

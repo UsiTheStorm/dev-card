@@ -17,16 +17,14 @@ const person = {
 };
 
 function App() {
-  const { link, name, description } = person;
+  const { link, name, description, skills } = person;
   return (
     <div className="card">
       <Avatar image={link} alt={name} />
       <div className="data">
         <Intro name={name} description={description} />
-        {/* Should contain one Skill component
-        for each web dev skill that you have,
-        customized with props */}
-        <SkillList />
+
+        <SkillList skills={skills} />
       </div>
     </div>
   );
@@ -45,20 +43,20 @@ function Intro({ name, description }) {
   );
 }
 
-function Skill({ skillName, skillEmojy, skillColor }) {
+function Skill({ skill }) {
   return (
-    <span className="skill" style={{ backgroundColor: skillColor }}>
-      {`${skillName} ${skillEmojy}`}
+    <span className="skill" style={{ backgroundColor: skill.color }}>
+      {`${skill.name} ${skill.emoji}`}
     </span>
   );
 }
 
-function SkillList() {
-  const skills = person.skills;
+function SkillList({ skills }) {
+  // const skills = person.skills;
   return (
     <div className="skill-list">
-      {skills.map(({ name, emoji, color }) => (
-        <Skill skillName={name} skillEmojy={emoji} skillColor={color} key={name} />
+      {skills.map((skill) => (
+        <Skill skill={skill} key={skill.name} />
       ))}
     </div>
   );

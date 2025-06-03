@@ -9,6 +9,11 @@
 body {
   font-family: 'IBM Plex Mono', sans-serif;
   background-color: #f7f7f7;
+
+  min-height: 100vh;
+
+  padding: 10px;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -61,13 +66,16 @@ h1 {
   white-space: nowrap;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   body {
     padding: 10px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
   }
 
   .card {
-    margin: 20px 10px;
+    margin: 0;
     border-width: 3px;
   }
 

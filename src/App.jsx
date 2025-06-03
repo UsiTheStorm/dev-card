@@ -52,7 +52,6 @@ function Skill({ skill }) {
 }
 
 function SkillList({ skills }) {
-  // const skills = person.skills;
   return (
     <div className="skill-list">
       {skills.map((skill) => (

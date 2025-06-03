@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 const person = {
-  link: '../steve.jpg',
+  link: './steve.jpg',
   name: 'Steve Jobs',
   description:
     'An American businessman, inventor, and investor best known for co-founding the technology company Apple Inc. A pioneering entrepreneur who revolutionized personal computing and consumer electronics with iconic products like the iPhone.',

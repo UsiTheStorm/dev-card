@@ -6,7 +6,7 @@ const person = {
   link: './steve.jpg',
   name: 'Steve Jobs',
   description:
-    'An American businessman, inventor, and investor best known for co-founding the technology company Apple Inc. A pioneering entrepreneur who revolutionized personal computing and consumer electronics with iconic products like the iPhone.',
+    'Co-founder of Apple Inc., an American businessman, inventor, and investor. He revolutionized personal computing and consumer electronics with iconic products such as the iPhone.',
   skills: [
     { name: 'Visionary', emoji: '✨', color: '#FFD700' }, // Золотий
     { name: 'Innovator', emoji: '💡', color: '#87CEEB' }, // Небесно-блакитний
